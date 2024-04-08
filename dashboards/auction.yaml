@@ -1,0 +1,90 @@
+# Visit https://docs.rilldata.com/reference/project-files to learn more about Rill project files.
+
+title: "Programmatic Ads Auction"
+model: "auction_data_model"
+timeseries: "__time"
+measures:
+  - label: Requests
+    name: requests
+    expression: sum(bid_request_cnt)
+    description: Total Requests
+    format_preset: humanize
+  - label: "Avg Bid Floor"
+    name: avg_bid_floor
+    expression: "sum(bid_floor) / sum(has_bid_floor_cnt) "
+    description: "Average Bid Floor"
+    format_preset: currency_usd
+  - label: "1D QPS"
+    name: 1d_qps
+    expression: "sum(bid_request_cnt) / 86400 "
+    description: "1D QPS"
+    format_preset: humanize
+dimensions:
+  - label: App Site Name
+    column: app_site_name
+    description: ""
+  - label: App Site Domain
+    column: app_site_domain
+    description: ""
+  - label: Pub Name
+    column: pub_name
+    description: ""
+  - label: App Site Cat
+    column: app_site_cat
+    description: ""
+  - label: Ad Size
+    column: ad_size
+    description: ""
+  - label: Device State
+    column: device_state
+    description: ""
+  - label: Device OS Version
+    column: device_osv
+    description: ""
+  - label: Bid Floor Bucket
+    column: bid_floor_bucket
+    description: ""
+  - label: Platform Browser
+    column: platform_browser
+    description: ""
+  - label: Device OS
+    column: device_os
+    description: ""
+  - label: Device Type
+    column: device_type
+    description: ""
+  - label: Ad Position
+    column: ad_position
+    description: ""
+  - label: Video Max Duration Bucket
+    column: video_max_duration_bucket
+    description: ""
+  - label: Video Min Duration Bucket
+    column: video_min_duration_bucket
+    description: ""
+  - label: Placement Type
+    column: placement_type
+    description: ""
+  - label: Auction Type
+    column: auction_type
+    description: ""
+  - label: App or Site
+    column: app_or_site
+    description: ""
+  - label: "Device Country"
+    column: "device_country"
+    description: ""
+smallest_time_grain: "hour"
+default_time_range: "P1W"
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney

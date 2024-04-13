@@ -41,3 +41,5 @@ For Sellers:
 For Marketplaces/Technology Providers:
   - Troubleshoot campaigns and quickly identify ad server issues
   - Instantly view top-line revenue, volume, eCPM, and other key metrics without pulling complex reports
+
+The dashboard can be accessed [here](https://ui.rilldata.com/daniel1kp/openrtb-dashboard).
